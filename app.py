@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 import subprocess
 load_dotenv()
+subprocess.run(["python", "setup_models.py"])
 os.environ['langchain_api_key']= os.getenv("langchain_api_key")
 os.environ['langchain_tracing_V2']='True'
 from langchain_community.llms import Ollama
