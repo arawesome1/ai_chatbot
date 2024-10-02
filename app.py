@@ -2,7 +2,14 @@ import os
 from dotenv import load_dotenv
 import subprocess
 load_dotenv()
-subprocess.run(["python", "setup_models.py"])
+def pull_models():
+    try:
+        subprocess.run(["python", "setup_models.py"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to pull models: {e}")
+
+# Call the function to pull models
+pull_models()
 os.environ['langchain_api_key']= os.getenv("langchain_api_key")
 os.environ['langchain_tracing_V2']='True'
 from langchain_community.llms import Ollama
