@@ -1,7 +1,7 @@
 streamlit
 langchain
-langchain-core
-langchain-ollama
-langchain-community
-ollama
+langchain_core
+langchain_ollama
+langchain_community
 python-dotenv
+subprocess
