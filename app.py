@@ -23,6 +23,14 @@ def generate_response(question,engine,temperature,max_token):
 
 
 st.title("QnA Chatbot")
+engine=st.sidebar.selectbox("Select Model",['gemma2-9b-it','lama3-groq-70b-8192-tool-use-preview','mixtral-8x7b-32768','llava-v1.5-7b-4096-preview'])
+temperature = st.sidebar.slider("Temperature",min_value=0.0, max_value=1.0,value=0.7)
+max_token = st.sidebar.slider("Max Token",min_value=50, max_value=300, value = 150)
+
+st.sidebar.write("Made by Ankit")
+st.sidebar.write("This is just an AI interfernce, without VectorStoreDB or RAG Supported")
+st.write("Go ahead and ask your question")
+user_input = st.text_input("You: ")
 st.markdown("""
 This AI-powered chatbot answers your questions in real-time using advanced language models. Unlike other chatbots, it **does not use Retrieval-Augmented Generation (RAG)** or external databases like vector stores. Everything is generated purely from the AI's built-in knowledge.
 
@@ -32,14 +40,6 @@ This AI-powered chatbot answers your questions in real-time using advanced langu
 - Adjustable **temperature** and **token limits** for fine-tuning responses.
 - User-friendly interface with quick response times.
 """)
-engine=st.sidebar.selectbox("Select Model",['gemma2-9b-it','lama3-groq-70b-8192-tool-use-preview','mixtral-8x7b-32768','llava-v1.5-7b-4096-preview'])
-temperature = st.sidebar.slider("Temperature",min_value=0.0, max_value=1.0,value=0.7)
-max_token = st.sidebar.slider("Max Token",min_value=50, max_value=300, value = 150)
-
-st.sidebar.write("Made by Ankit")
-st.sidebar.write("This is just an AI interfernce, without VectorStoreDB or RAG Supported")
-st.write("Go ahead and ask your question")
-user_input = st.text_input("You: ")
 if user_input:
     response = generate_response(user_input,engine,temperature,max_token)
     st.write(response)
