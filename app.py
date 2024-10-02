@@ -19,6 +19,8 @@ def generate_response(question,engine,temperature,max_token):
     chain = prompt | llm | output_parser
     answer = chain.invoke({'question': question})
     return answer
+    except Exception as e:
+        return f"Error: {e}"
 
 st.title("QnA Chatbot")
 engine=st.sidebar.selectbox("Select Model",['mistral','llama3.2','gemma2','phi3'])
