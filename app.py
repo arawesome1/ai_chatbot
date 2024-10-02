@@ -1,5 +1,6 @@
 import os 
 from dotenv import load_dotenv
+import subprocess
 load_dotenv()
 os.environ['langchain_api_key']= os.getenv("langchain_api_key")
 os.environ['langchain_tracing_V2']='True'
