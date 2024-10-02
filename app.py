@@ -31,6 +31,12 @@ st.sidebar.write("Made by Ankit")
 st.sidebar.write("This is just an AI interfernce, without VectorStoreDB or RAG Supported")
 st.write("Go ahead and ask your question")
 user_input = st.text_input("You: ")
+
+if user_input:
+    response = generate_response(user_input,engine,temperature,max_token)
+    st.write(response)
+else:
+    st.write("Please provide user input")
 st.markdown("""
 This AI-powered chatbot answers your questions in real-time using advanced language models. Unlike other chatbots, it **does not use Retrieval-Augmented Generation (RAG)** or external databases like vector stores. Everything is generated purely from the AI's built-in knowledge.
 
@@ -40,8 +46,3 @@ This AI-powered chatbot answers your questions in real-time using advanced langu
 - Adjustable **temperature** and **token limits** for fine-tuning responses.
 - User-friendly interface with quick response times.
 """)
-if user_input:
-    response = generate_response(user_input,engine,temperature,max_token)
-    st.write(response)
-else:
-    st.write("Please provide user input")
