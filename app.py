@@ -1,7 +1,7 @@
 import os 
 from dotenv import load_dotenv
 load_dotenv()
-os.environ['langchain_api_key']= os.getenv("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")
+os.environ['langchain_api_key']= os.getenv("langchain_api_key")
 os.environ['langchain_tracing_V2']='True'
 from langchain_community.llms import Ollama
 from langchain_core.prompts import ChatPromptTemplate
