@@ -46,3 +46,7 @@ This AI-powered chatbot answers your questions in real-time using advanced langu
 - Adjustable **temperature** and **token limits** for fine-tuning responses.
 - User-friendly interface with quick response times.
 """)
+st.markdown("""
+**Want to know how this chatbot was built?**  
+[Click here to watch the video](https://www.youtube.com/watch?v=Iv4eRB5qLtg)
+""")
