@@ -37,7 +37,7 @@ if user_input:
     st.write(response)
 else:
     st.write("Please provide user input")
-st.markdown("""
+    st.markdown("""
 This AI-powered chatbot answers your questions in real-time using advanced language models. Unlike other chatbots, it **does not use Retrieval-Augmented Generation (RAG)** or external databases like vector stores. Everything is generated purely from the AI's built-in knowledge.
 
 ### Key Features:
