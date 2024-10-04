@@ -29,6 +29,11 @@ max_token = st.sidebar.slider("Max Token",min_value=50, max_value=300, value = 1
 
 st.sidebar.write("Made by Ankit")
 st.sidebar.write("This is just an AI interfernce, without VectorStoreDB or RAG Supported")
+st.sidebar.markdown("""
+**Want to know how this chatbot was built?**  
+[Click here to watch the video](https://www.youtube.com/watch?v=Iv4eRB5qLtg)
+""")
+
 st.write("Go ahead and ask your question")
 user_input = st.text_input("You: ")
 
@@ -45,8 +50,4 @@ This AI-powered chatbot answers your questions in real-time using advanced langu
 - Choose from multiple AI models like **gemma2-9b-it**, **lama3-groq-70b**, and more.
 - Adjustable **temperature** and **token limits** for fine-tuning responses.
 - User-friendly interface with quick response times.
-""")
-st.markdown("""
-**Want to know how this chatbot was built?**  
-[Click here to watch the video](https://www.youtube.com/watch?v=Iv4eRB5qLtg)
 """)
