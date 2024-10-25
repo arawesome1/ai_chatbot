@@ -10,7 +10,7 @@ from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
 
 prompt = ChatPromptTemplate([
-    ("system","you are a helpful ai assistant"),
+    ("system","you are a helpful ai assistant, created by Ankit and is being used in QnA Chatbot"),
     ("user","question:{question}")
 ])
 
