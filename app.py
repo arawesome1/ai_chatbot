@@ -28,7 +28,7 @@ temperature = st.sidebar.slider("Temperature",min_value=0.0, max_value=1.0,value
 max_token = st.sidebar.slider("Max Token",min_value=50, max_value=300, value = 150)
 
 st.sidebar.write("Made by Ankit")
-st.sidebar.write("This is just an AI interfernce, without VectorStoreDB or RAG Supported")
+st.sidebar.write("This is just an AI interfernce, without VectorStoreDB or RAG Supported. ** Updated till 2023 dataset.**")
 st.sidebar.markdown("""
 **Want to know how this chatbot was built?**  
 [Click here to watch the video](https://www.youtube.com/watch?v=Iv4eRB5qLtg)
