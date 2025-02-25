@@ -47,7 +47,7 @@ This AI-powered chatbot answers your questions in real-time using advanced langu
 
 ### Key Features:
 - **Direct answers** without external data sources.
-- Choose from multiple AI models like **gemma2-9b-it**, **lama3-groq-70b**, and more.
+- Choose from multiple AI models like **gemma2-9b-it**, **llama-3.1-8b-instant**, and more.
 - Adjustable **temperature** and **token limits** for fine-tuning responses.
 - User-friendly interface with quick response times.
 """)
