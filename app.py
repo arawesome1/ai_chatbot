@@ -23,7 +23,7 @@ def generate_response(question,engine,temperature,max_token):
 
 
 st.title("QnA Chatbot")
-engine=st.sidebar.selectbox("Select Model",['gemma2-9b-it','llama-3.1-8b-instant','whisper-large-v3','distil-whisper-large-v3-en'])
+engine=st.sidebar.selectbox("Select Model",['gemma2-9b-it','llama-3.1-8b-instant','mistral-saba-24b','qwen/qwen3-32b'])
 temperature = st.sidebar.slider("Temperature",min_value=0.0, max_value=1.0,value=0.7)
 max_token = st.sidebar.slider("Max Token",min_value=50, max_value=300, value = 150)
 
